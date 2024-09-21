@@ -1,0 +1,17 @@
+
+body { 
+    background-color:black;
+    color:white;
+}
+
+
+.one {
+width:220px; height: 310px; transition: all 0.1s;
+}
+
+.onecard {
+width: 220px; height: 310px;
+background-image:url(1.png);
+background-size: cover;
+
+}

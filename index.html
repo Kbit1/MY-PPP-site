@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <title>피카츄 카드 수집하기!</title>
+
+<link rel="stylesheet" a href="style.css">
+<h2>피카츄 카드 수집하기</h2>
+
+<!--    -->
+
+
+<body>
+    <div class="one">
+        <div class="onecard"></div>
+    </div>
+        
+        <script>
+            var one = document.querySelector('.one')
+            one.addEventListener('mousemove',function(e){ 
+            var x = e.offsetX
+            var y = e.offsetY
+          var rotateY = -1/5 * x +20
+          var rotatex = 4/30 * y -20
+            
+            one.style = `transform : rotateX(${rotatex}deg) rotateY(${rotateY}deg)`
+            
+             })
+        </script>
+
+</body>
+</html>
