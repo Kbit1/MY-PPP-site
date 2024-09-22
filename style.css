@@ -1,17 +1,55 @@
-
-body { 
-    background-color:black;
-    color:white;
+body {
+    background-color: black;
+    color: white;
 }
 
 
 .one {
-width:220px; height: 310px; transition: all 0.1s;
+    width: 220px;
+    height: 310px;
+    transition: all 0.1s;
+    position: relative;
+}
+
+/* overlay 카드에 반짝이 효과를 넣는 div 로 one은 피카츄 카드이고 그 카드 위에 overlay가 위로 올라가서
+backgornd linear-gradient 효과 그라데이션을 넣어주었으며 / overlay 에 position:absolute 를 주고 one에 position:relative를 주어 부모 관계를 만들어주고
+절대적 위치를 만든다.
+ */
+.overlay {
+    position: absolute;
+    width: 220px;
+    height: 310px;
+    background: linear-gradient(105deg, transparent 30%,
+            rgba(223, 175, 32, 0.8) 45%,
+            rgba(250, 70, 38, 0.5) 60%,
+            transparent 70%);
+
+    filter: brightness(1.5) /* <밝기에 관련된 태그> filter:brightness();
+                            밝기를 밝게 해주고 싶을때 혹은 어둡게 해주고 싶을때                                           
+                            화면에서도 나오는것처럼
+                            filter : brightness(1);
+                            filter : brightness(1.75);
+                            filter : brightness(50%);
+                            에 따라 밝기가 조절되는것을 확인할 수 있다
+                            */
+        
+
+        opacity(0.8); /* opacity 는 불투명도를 조절한다 */
+    
+
+    mix-blend-mode: hard-light; /* mix-blend-mode는 배경의 혼합 상태 즉 / 자신의 배경 및 부모와 어떻게 혼합되는지 지정한다
+                                   overlay 와 one 관계
+                                */
+    
+
+
+
 }
 
 .onecard {
-width: 220px; height: 310px;
-background-image:url(1.png);
-background-size: cover;
+    width: 220px;
+    height: 310px;
+    background-image: url(1.png);
+    background-size: cover;
 
 }
