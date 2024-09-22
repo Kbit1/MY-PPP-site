@@ -41,7 +41,7 @@ backgornd linear-gradient 효과 그라데이션을 넣어주었으며 / overlay
                                    overlay 와 one 관계
                                 */
     
-
+    transition: all 0.1s;
 
 
 }
