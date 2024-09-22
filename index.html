@@ -10,17 +10,21 @@
 
 <body>
     <div class="one">
+        <div class="overlay"></div>
         <div class="onecard"></div>
     </div>
-        
+    
         <script>
             var one = document.querySelector('.one')
+            var overlay = document.querySelector('.overlay')
             one.addEventListener('mousemove',function(e){ 
             var x = e.offsetX
             var y = e.offsetY
           var rotateY = -1/5 * x +20
           var rotatex = 4/30 * y -20
             
+                overlay.style = `background-position : ${x/5 + y/5}px`
+
             one.style = `transform : perspective(350px) rotateX(${rotatex}deg) rotateY(${rotateY}deg)`
             
              })
