@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
     <title>피카츄 카드 수집하기!</title>
 
@@ -9,11 +8,14 @@
 
 
 <body>
+        <div class="displaybundle">
     <div class="one">
         <div class="overlay"></div>
         <div class="onecard"></div>
     </div>
-    
+    <div class="overlay2"></div>
+    <div class="twocard"></div>
+        </div>
         <script>
             var one = document.querySelector('.one')
             var overlay = document.querySelector('.overlay')
@@ -24,15 +26,10 @@
           var rotatex = 4/30 * y -20
             
                 overlay.style = `background-position : ${x/5 + y/5}px`
-
-            one.style = `transform : perspective(350px) rotateX(${rotatex}deg) rotateY(${rotateY}deg)`
-            
+                one.style = `transform : perspective(350px) rotateX(${rotatex}deg) rotateY(${rotateY}deg)`
              })
-
              one.addEventListener('mouseout' , function() {
-              
-                one.style = 'transform : perpective(350px) rotateY(0deg) rotateX(0deg)'
-
+            one.style = 'transform : perpective(350px) rotateY(0deg) rotateX(0deg)'
              })
 
 
