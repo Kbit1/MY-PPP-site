@@ -9,6 +9,7 @@ body {
     height: 310px;
     transition: all 0.1s;
     position: relative;
+   padding: 30px;
 }
 
 /* overlay 카드에 반짝이 효과를 넣는 div 로 one은 피카츄 카드이고 그 카드 위에 overlay가 위로 올라가서
@@ -46,10 +47,40 @@ backgornd linear-gradient 효과 그라데이션을 넣어주었으며 / overlay
 
 }
 
+.overlay2 {
+    position: absolute;
+    width: 220px;
+    height: 310px;
+    background: linear-gradient(105deg, transparent 50%,
+            rgba(32, 61, 223, 0.8) 65%,
+            rgba(250, 70, 38, 0.5) 20%,
+            transparent 30%);
+
+    filter: brightness(1.5)
+    opacity(0.8);
+    mix-blend-mode: hard-light;
+    transition: all 0.1s;
+}
+
+
+
 .onecard {
     width: 220px;
     height: 310px;
     background-image: url(1.png);
     background-size: cover;
 
+}
+
+.twocard {
+    width: 220px;
+    height: 310px;
+    background-image: url(./image/2.png);
+    background-size: cover;
+}
+
+.displaybundle {
+    display:flex;
+    justify-content: center;
+    align-items: center;
 }
