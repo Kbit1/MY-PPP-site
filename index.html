@@ -1,39 +1,83 @@
+<!DOCTYPE html>
 <html>
-    <title>피카츄 카드 수집하기!</title>
+<title>피카츄 카드 수집하기!</title>
 
 <link rel="stylesheet" a href="style.css">
+
 <h2>피카츄 카드 수집하기</h2>
 
 <!--    -->
 
 
 <body>
-        <div class="displaybundle">
-    <div class="one">
-        <div class="overlay"></div>
-        <div class="onecard"></div>
-    </div>
-    <div class="overlay2"></div>
-    <div class="twocard"></div>
+    <div class="displaybundle">
+        <div class="one">
+            <div class="overlay"></div>
+            <div class="onecard"></div>
         </div>
-        <script>
-            var one = document.querySelector('.one')
-            var overlay = document.querySelector('.overlay')
-            one.addEventListener('mousemove',function(e){ 
+
+        <div class="two">
+            <div class="overlay2"></div>
+            <div class="twocard"></div>
+        </div>
+    </div>
+    <script>
+        // -------------------------------------------- 
+
+
+        var one = document.querySelector('.one')
+        var overlay = document.querySelector('.overlay')
+        one.addEventListener('mousemove', function (e) {
             var x = e.offsetX
             var y = e.offsetY
-          var rotateY = -1/5 * x +20
-          var rotatex = 4/30 * y -20
-            
-                overlay.style = `background-position : ${x/5 + y/5}px`
-                one.style = `transform : perspective(350px) rotateX(${rotatex}deg) rotateY(${rotateY}deg)`
-             })
-             one.addEventListener('mouseout' , function() {
+            var rotateY = -1 / 5 * x + 20
+            var rotatex = 5 / 30 * y - 20
+
+
+            overlay.style = `background-position : ${x / 5 + y / 5}px`
+            one.style = `transform : perspective(350px) rotateX(${rotatex}deg) rotateY(${rotateY}deg)`
+        })
+        one.addEventListener('mouseout', function () {
             one.style = 'transform : perpective(350px) rotateY(0deg) rotateX(0deg)'
-             })
+        })
+
+        // ------------------------------------------
+
+        // var two = document.querySelector('.two')
+        // var overlay2 = document.querySelector('.overlay2')
+        // two.addEventListener('mousemove', function (e) {
+        //     var x = e.offsetX
+        //     var y = e.offsetY
+        //     var rotateY = 3 / 10 * x + 30
+        //     var rotatex = 10 / 50 * y - 30
+
+        //     overlay2.style = `background-position : ${x / 5 + y / 5}px`
+        //     two.style = `transform : perpective(350px) rotateX(${rotatex}deg) rotateY(${rotateY}deg)`
+        // })
+        // two.addEventListener('mouseout', function () {
+        //     two.style = 'transform : perpective(350px) rotateY(0deg) rotateX(0deg)'
+        // })
 
 
-        </script>
+        var two = document.querySelector('.two')
+        var overlay2 = document.querySelector('.overlay2')
+        two.addEventListener('mousemove', function (e) {
+            var x = e.offsetX
+            var y = e.offsetY
+            var rotateY = -1 / 5 * x + 20
+            var rotatex = 5 / 30 * y - 20
+
+
+            overlay2.style = `background-position : ${x / 5 + y / 5}px`
+            two.style = `transform : perspective(350px) rotateX(${rotatex}deg) rotateY(${rotateY}deg)`
+        })
+        two.addEventListener('mouseout', function () {
+            two.style = 'transform : perpective(350px) rotateY(0deg) rotateX(0deg)'
+        })
+
+
+    </script>
 
 </body>
+
 </html>
